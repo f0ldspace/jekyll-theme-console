@@ -131,3 +131,28 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .vg { color: var(--code-color-7); } /* Name.Variable.Global */
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
+
+/**
+ * Post header styling
+ */
+.post-header { margin-bottom: 30px; }
+.post-meta { display: flex; align-items: baseline; gap: 15px; margin-bottom: 10px; }
+.post-date { color: var(--code-color-11); font-size: $base-font-size; }
+.post-title { display: inline; font-size: $base-font-size; margin: 0; }
+.post-tags { color: var(--code-color-11); font-size: $base-font-size * 0.9; }
+.post-tags .tag { color: var(--link-color); }
+
+/**
+ * Enhanced headers for post content
+ */
+.post-header + h1, .post-header + h2, .post-header + h3, 
+.post-header + h4, .post-header + h5, .post-header + h6,
+.post-header + p + h1, .post-header + p + h2, .post-header + p + h3,
+.post-header + p + h4, .post-header + p + h5, .post-header + p + h6,
+.post-header ~ h1, .post-header ~ h2, .post-header ~ h3,
+.post-header ~ h4, .post-header ~ h5, .post-header ~ h6 {
+  color: var(--code-color-13);
+  font-size: $base-font-size * 1.3;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
