@@ -5,3 +5,5 @@ gemspec
 
 
 gem 'jekyll-seo-tag'
+
+gem "kramdown-parser-gfm", "~> 1.1"
