@@ -54,6 +54,56 @@ footer { margin-bottom: 20px; }
 :not(.menu) > ul ul ul > li:before { content: "◦";  margin-right: 9px;  color: var(--code-color-13);  font-weight: normal; }
 
 /**
+ * Checkboxes
+ */
+:not(.menu) > ul > li.task-list-item { list-style-type: none; }
+:not(.menu) > ul > li.task-list-item:before { content: none; }
+.task-list-item input[type="checkbox"] { 
+  -webkit-appearance: none; 
+  appearance: none; 
+  margin-right: 9px; 
+  margin-left: 0;
+  position: relative;
+  top: 2px;
+}
+.task-list-item input[type="checkbox"]:before { 
+  content: "[ ]"; 
+  color: var(--code-color-15); 
+  font-weight: bold; 
+}
+.task-list-item input[type="checkbox"]:checked:before { 
+  content: "[x]"; 
+  color: var(--code-color-9); 
+}
+
+/**
+ * Tables
+ */
+table { 
+  border-collapse: collapse; 
+  margin: 15px 0; 
+  width: 100%; 
+  overflow-x: auto;
+  display: block;
+}
+table th, table td { 
+  border: 1px solid var(--code-color-18); 
+  padding: 8px 12px; 
+  text-align: left; 
+}
+table th { 
+  background-color: var(--code-color-11); 
+  color: var(--background-color); 
+  font-weight: bold; 
+}
+table tr:nth-child(even) { 
+  background-color: rgba(168, 153, 132, 0.1); 
+}
+table tr:hover { 
+  background-color: rgba(168, 153, 132, 0.2); 
+}
+
+/**
  * Header/Navigation
  */
 .menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
@@ -150,6 +200,45 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .post-title { display: inline; font-size: $base-font-size; margin: 0; }
 .post-tags { color: var(--code-color-11); font-size: $base-font-size * 0.9; }
 .post-tags .tag { color: var(--link-color); }
+
+/**
+ * Tags page styling
+ */
+.tags-page hr { border: none; border-top: var(--border); margin: 25px 0; }
+.tags-page h2 { color: var(--code-color-5); }
+.tags-page h3 { color: var(--code-color-13); margin-top: 25px; }
+.tag-cloud { margin: 20px 0; line-height: 2; }
+.tag-cloud .tag-link { 
+  color: var(--link-color); 
+  text-decoration: none; 
+  margin-right: 15px;
+  white-space: nowrap;
+}
+.tag-cloud .tag-link:hover { 
+  color: var(--background-color); 
+  background-color: var(--base-color); 
+}
+.tags-page .post-list { 
+  list-style: none; 
+  margin-left: 0; 
+  padding-left: 0; 
+}
+.tags-page .post-list li { 
+  margin-bottom: 8px; 
+}
+.tags-page .post-list li:before { 
+  content: "▸"; 
+  margin-right: 9px; 
+  color: var(--code-color-15); 
+  font-weight: bold; 
+}
+.tags-page .post-meta { 
+  color: var(--code-color-11); 
+  font-size: $base-font-size; 
+  margin-right: 15px; 
+  display: inline-block;
+  min-width: 120px;
+}
 
 /**
  * Enhanced headers for post content
