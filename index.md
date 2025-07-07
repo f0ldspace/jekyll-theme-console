@@ -27,3 +27,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | ------- | ------- |
 | Item1.1 | Item2.1 |
 | Item1.2 | Item2.2 |
+
+---
+
+# Image test
+
+![epic](/assets/images/test.png)
