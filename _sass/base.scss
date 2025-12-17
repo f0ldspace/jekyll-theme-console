@@ -5,36 +5,88 @@
  * Style variables
  */
 $base-font-family:     'Source Code Pro', monospace !default;
-$base-font-size:       12.5px !default;
-$mobile-font-size:     12px !default;
-$base-line-height:     1.5 !default;
+$base-font-size:       14px !default;
+$mobile-font-size:     13px !default;
+$base-line-height:     1.65 !default;
 $container-width:      90% !default;
-$container-max-width:  600px !default;
+$container-max-width:  750px !default;
 
 /**
  * Global
  */
-body { background-color: var(--background-color);  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
-h1 { font-size: $base-font-size * 2;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-7); }
-h2 { font-size: $base-font-size * 1.7;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-5); }
-h3 { font-size: $base-font-size * 1.5;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-13); }
-h4 { font-size: $base-font-size * 1.3;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-12); }
-h5 { font-size: $base-font-size * 1.2;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-16); }
-h6 { font-size: $base-font-size * 1.1;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-15); }
-p, ul, ol { margin: 0px;  color: var(--text-color); }
-a { text-decoration: underline;  color: var(--link-color); }
-a:hover { color: var(--background-color); background-color: var(--base-color); }
-@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
+body {
+  background-color: var(--background-color);
+  margin: 0 auto;
+  padding: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: var(--text-color);
+  text-align: left;
+  line-height: $base-line-height !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: $base-font-size * 1.8; color: var(--code-color-7); }
+h2 { font-size: $base-font-size * 1.5; color: var(--code-color-5); }
+h3 { font-size: $base-font-size * 1.25; color: var(--code-color-13); }
+h4 { font-size: $base-font-size * 1.1; color: var(--code-color-12); }
+h5 { font-size: $base-font-size; color: var(--code-color-16); }
+h6 { font-size: $base-font-size * 0.95; color: var(--code-color-15); }
+
+p, ul, ol { margin: 0px; color: var(--text-color); }
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+  transition: border-color 0.15s ease;
+}
+a:hover {
+  border-bottom-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  body { font-size: $mobile-font-size; }
+}
 
 /**
  * Layout
  */
-.container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
-p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
-footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
-header { margin-top: 25px;  margin-bottom: 10px; }
-header p { text-align: left;  margin: 0; }
-footer { margin-bottom: 20px; }
+.container {
+  width: $container-width;
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+p {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 1.25em;
+}
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+header p { text-align: left; margin: 0; }
+
+footer {
+  color: var(--text-color);
+  border-top: var(--border);
+  margin: 3rem auto 1.5rem;
+  padding-top: 1rem;
+  text-align: right;
+  font-size: 0.9em;
+}
 
 /**
  * Highlight/Markup
@@ -45,13 +97,45 @@ footer { margin-bottom: 20px; }
 /**
  * Lists
  */
-:not(.menu) > ul { list-style: none;  padding-left: 0; }
-:not(.menu) > ul { list-style-type: none; }
-:not(.menu) > ul > li:before { content: "▸";  margin-right: 9px;  color: var(--code-color-15);  font-weight: bold; }
-:not(.menu) > ul ul { padding-left: 20px; }
-:not(.menu) > ul ul > li:before { content: "▪";  margin-right: 9px;  color: var(--code-color-5);  font-weight: normal; }
-:not(.menu) > ul ul ul { padding-left: 20px; }
-:not(.menu) > ul ul ul > li:before { content: "◦";  margin-right: 9px;  color: var(--code-color-13);  font-weight: normal; }
+:not(.menu) > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.25em;
+}
+:not(.menu) > ul > li {
+  margin-bottom: 0.5em;
+}
+:not(.menu) > ul > li:before {
+  content: "▸";
+  margin-right: 0.75rem;
+  color: var(--code-color-15);
+  font-weight: bold;
+}
+:not(.menu) > ul ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5em;
+}
+:not(.menu) > ul ul > li:before {
+  content: "▪";
+  margin-right: 0.75rem;
+  color: var(--code-color-5);
+  font-weight: normal;
+}
+:not(.menu) > ul ul ul { padding-left: 1.5rem; }
+:not(.menu) > ul ul ul > li:before {
+  content: "◦";
+  margin-right: 0.75rem;
+  color: var(--code-color-13);
+  font-weight: normal;
+}
+
+ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.5rem;
+}
+ol li {
+  margin-bottom: 0.5em;
+}
 
 /**
  * Checkboxes
@@ -106,11 +190,30 @@ table tr:hover {
 /**
  * Header/Navigation
  */
-.menu { border-top: var(--border);  border-bottom: var(--border);  margin-bottom: 25px; }
-.menu ul { margin-top: 12px;  margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; }
-.menu ul li { display: inline;  margin-left: 10px; }
-.menu ul li a { text-decoration: none;  color: var(--text-color); }
-.menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+.menu {
+  border-top: var(--border);
+  border-bottom: var(--border);
+  margin-bottom: 2rem;
+}
+.menu ul {
+  margin: 0.75rem 0;
+  padding-left: 0;
+  list-style-type: none;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+.menu ul li { display: inline; }
+.menu ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: none;
+  padding: 0.25rem 0;
+}
+.menu ul li a:hover {
+  color: var(--link-color);
+}
 
 /**
  * Form
@@ -194,12 +297,34 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 /**
  * Post header styling
  */
-.post-header { margin-bottom: 30px; }
-.post-meta { display: flex; align-items: baseline; gap: 15px; margin-bottom: 10px; }
-.post-date { color: var(--code-color-11); font-size: $base-font-size; }
-.post-title { display: inline; font-size: $base-font-size; margin: 0; }
-.post-tags { color: var(--code-color-11); font-size: $base-font-size * 0.9; }
-.post-tags .tag { color: var(--link-color); }
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: var(--border);
+}
+.post-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.post-date {
+  color: var(--code-color-11);
+  font-size: $base-font-size;
+}
+.post-title {
+  display: inline;
+  font-size: $base-font-size;
+  margin: 0;
+}
+.post-tags {
+  color: var(--code-color-11);
+  font-size: $base-font-size * 0.9;
+}
+.post-tags .tag {
+  color: var(--link-color);
+  border-bottom: none;
+}
 
 /**
  * Tags page styling
@@ -207,16 +332,19 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .tags-page hr { border: none; border-top: var(--border); margin: 25px 0; }
 .tags-page h2 { color: var(--code-color-5); }
 .tags-page h3 { color: var(--code-color-13); margin-top: 25px; }
-.tag-cloud { margin: 20px 0; line-height: 2; }
-.tag-cloud .tag-link { 
-  color: var(--link-color); 
-  text-decoration: none; 
-  margin-right: 15px;
+.tag-cloud {
+  margin: 1.5rem 0;
+  line-height: 2;
+}
+.tag-cloud .tag-link {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-color);
+  margin-right: 1.25rem;
   white-space: nowrap;
 }
-.tag-cloud .tag-link:hover { 
-  color: var(--background-color); 
-  background-color: var(--base-color); 
+.tag-cloud .tag-link:hover {
+  border-bottom-color: transparent;
 }
 .tags-page .post-list { 
   list-style: none; 
@@ -243,12 +371,12 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 /**
  * Enhanced headers for post content
  */
-.post-header ~ h1 { color: var(--code-color-7); font-size: $base-font-size * 2; margin-top: 30px; margin-bottom: 15px; }
-.post-header ~ h2 { color: var(--code-color-5); font-size: $base-font-size * 1.7; margin-top: 30px; margin-bottom: 15px; }
-.post-header ~ h3 { color: var(--code-color-13); font-size: $base-font-size * 1.5; margin-top: 30px; margin-bottom: 15px; }
-.post-header ~ h4 { color: var(--code-color-12); font-size: $base-font-size * 1.3; margin-top: 30px; margin-bottom: 15px; }
-.post-header ~ h5 { color: var(--code-color-16); font-size: $base-font-size * 1.2; margin-top: 30px; margin-bottom: 15px; }
-.post-header ~ h6 { color: var(--code-color-15); font-size: $base-font-size * 1.1; margin-top: 30px; margin-bottom: 15px; }
+.post-header ~ h1 { color: var(--code-color-7); font-size: $base-font-size * 1.8; margin-top: 2.5rem; margin-bottom: 1rem; }
+.post-header ~ h2 { color: var(--code-color-5); font-size: $base-font-size * 1.5; margin-top: 2.5rem; margin-bottom: 1rem; }
+.post-header ~ h3 { color: var(--code-color-13); font-size: $base-font-size * 1.25; margin-top: 2rem; margin-bottom: 0.75rem; }
+.post-header ~ h4 { color: var(--code-color-12); font-size: $base-font-size * 1.1; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.post-header ~ h5 { color: var(--code-color-16); font-size: $base-font-size; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.post-header ~ h6 { color: var(--code-color-15); font-size: $base-font-size * 0.95; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 
 /**
  * Images
@@ -257,5 +385,61 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 15px 0;
+  margin: 1.5rem 0;
+}
+
+/**
+ * Horizontal rules
+ */
+hr {
+  border: none;
+  border-top: var(--border);
+  margin: 2.5rem 0;
+}
+
+/**
+ * Footnotes
+ */
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: var(--border);
+  font-size: 0.9em;
+}
+.footnotes ol {
+  padding-left: 1.5rem;
+}
+.footnotes li {
+  margin-bottom: 0.75rem;
+}
+.footnotes p {
+  margin-bottom: 0.5rem;
+}
+
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+}
+sup a {
+  border-bottom: none;
+  color: var(--code-color-5);
+}
+sup a:hover {
+  color: var(--link-color);
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 3px solid var(--code-color-18);
+  color: var(--code-color-11);
+}
+blockquote p {
+  margin-bottom: 0.5rem;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
 }
