@@ -1,32 +1,32 @@
 /**
- * Light theme variables - Gruvbox Light
+ * Light theme variables - Rose Pine Dawn (muted)
  */
 
 :root {
-  --base-color: #3c3836;
-  --border: dashed 1px rgba(60, 56, 54, 1);
-  --selection-background: rgba(215, 153, 33, 0.4);
-  --selection-text: #3c3836;
-  --background-color: #fbf1c7;
+  --base-color: #575279;
+  --border: dashed 1px rgba(87, 82, 121, 0.3);
+  --selection-background: rgba(234, 157, 52, 0.3);
+  --selection-text: #575279;
+  --background-color: #f2e9e1;
   --text-color: var(--base-color);
-  --placeholder-color: #7c6f64;
-  --link-color: #076678;
-  --code-color-1: #928374;
-  --code-color-2: #fabd2f;
-  --code-color-3: #cc241d;
-  --code-color-4: #fb4934;
-  --code-color-5: #458588;
-  --code-color-6: #98971a;
-  --code-color-7: #9d0006;
-  --code-color-8: #076678;
-  --code-color-9: #79740e;
-  --code-color-10: #928374;
-  --code-color-11: #665c54;
-  --code-color-12: #8f3f71;
-  --code-color-13: #427b58;
-  --code-color-14: #689d6a;
-  --code-color-15: #d65d0e;
-  --code-color-16: #458588;
-  --code-color-17: #af3a03;
-  --code-color-18: #a89984;
+  --placeholder-color: #9893a5;
+  --link-color: #286983;
+  --code-color-1: #9893a5;
+  --code-color-2: #ea9d34;
+  --code-color-3: #b4637a;
+  --code-color-4: #d7827e;
+  --code-color-5: #286983;
+  --code-color-6: #56949f;
+  --code-color-7: #b4637a;
+  --code-color-8: #286983;
+  --code-color-9: #56949f;
+  --code-color-10: #797593;
+  --code-color-11: #797593;
+  --code-color-12: #907aa9;
+  --code-color-13: #56949f;
+  --code-color-14: #ea9d34;
+  --code-color-15: #d7827e;
+  --code-color-16: #286983;
+  --code-color-17: #d7827e;
+  --code-color-18: #cecacd;
 }
